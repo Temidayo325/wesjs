@@ -1,0 +1,51 @@
+body
+{
+    background: rgb(234, 230, 230);
+}
+main
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main section{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 10px solid black;
+    box-shadow: 1px 1px 1px gray;
+    position: relative;
+}
+.hand
+{
+    height: 8px;
+    width: 140px;
+    position: absolute;
+    top: 50%;
+    transition: transform 1s linear;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    margin-left: 10px;
+}
+.hour
+{
+    background: black;
+}
+.minutes
+{
+    background: yellow;
+}
+.seconds
+{
+    background: red;
+}
+.button
+{
+    background: rgb(58, 58, 236);
+    color: white;
+    padding: 15px 45px;
+    margin-left: 30px;
+    border: none;
+    cursor: pointer;
+}
