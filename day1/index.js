@@ -22,10 +22,15 @@ AudioElements.forEach( (audio, index) => {
 
 drumPads.forEach( (drumPad, index) => {
     drumPad.addEventListener('click', () => {
+        AudioElements[index].currentTime = 0
         AudioElements[index].play()
         drumPad.classList.toggle('clicked')
-        setTimeout(() => {
-            drumPad.classList.toggle('clicked')
-        }, 100);
+        drumPad.addEventListener('transitionend', function(e){
+            if(e.propertyName != 'transform') return;
+            this.classList.remove('clicked')
+        })
+        // setTimeout(() => {
+        //     drumPad.classList.toggle('clicked')
+        // }, 100);
     })
 })
